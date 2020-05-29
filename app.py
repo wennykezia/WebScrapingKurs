@@ -69,7 +69,7 @@ def index():
 
     #This part for rendering matplotlib
     fig = plt.figure(figsize=(5,2),dpi=300)
-    tablekursjpy.plot.bar()
+    kursjpy.plot.bar()
     
     #Do not change this part
     plt.savefig('plot1',bbox_inches="tight") 
@@ -81,7 +81,7 @@ def index():
     #This part for rendering matplotlib
 
     #this is for rendering the table
-    df = tablekursjpy.to_html(classes=["table table-bordered table-striped table-dark table-condensed"])
+    df = kursjpy.to_html(classes=["table table-bordered table-striped table-dark table-condensed"])
 
     return render_template("index.html", table=df, result=result)
 
